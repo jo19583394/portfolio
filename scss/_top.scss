@@ -1,0 +1,48 @@
+.top {
+  background: linear-gradient(to bottom right, white 50%, #f1ca004d 50%);
+  margin-top: 60px;
+
+  @include spTab {
+    margin-top: 40px;
+  }
+}
+.top-main {
+  display: flex;
+  width: 100%;
+  height: 700px;
+  position: relative;
+
+  @include spTab {
+    display: block;
+    height: 570px;
+    text-align: center;
+  }
+}
+.top-mv {
+  margin-left: 100px;
+
+  @include spTab {
+    margin-left: 0;
+  }
+  img {
+    width: 600px;
+    height: auto;
+    margin-top: 30px;
+
+    @include spTab {
+      width: 400px;
+    }
+  }
+}
+.catchcopy {
+  color: #40bddd;
+  font-size: 3vw;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  @include spTab {
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 4vw;
+  }
+}

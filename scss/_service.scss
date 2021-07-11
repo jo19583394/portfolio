@@ -1,0 +1,73 @@
+.service-list {
+  display: flex;
+  margin-left: 60px;
+  margin-right: 60px;
+
+  @include spTab {
+    display: block;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+.service-item {
+  background-color: #e8e8e8;
+  padding: 30px 25px;
+  border-radius: 10px;
+
+  &:nth-child(n + 2) {
+    margin-left: 25px;
+
+    @include spTab {
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
+}
+
+.service-image {
+  text-align: center;
+  img {
+    height: 140px;
+    width: 140px;
+
+    @include spTab {
+      height: 120px;
+      width: 120px;
+    }
+  }
+}
+
+.service-description {
+  margin-top: 40px;
+}
+
+.service-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.service-text {
+  margin-top: 30px;
+}
+
+.price {
+  margin-top: 20px;
+}
+
+.price-description {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.price-text {
+  text-align: left;
+  display: inline-block;
+
+  @include spTab {
+    font-size: 16px;
+    text-align: center;
+  }
+}

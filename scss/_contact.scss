@@ -1,0 +1,39 @@
+.contact-content {
+  background-color: #f1ca00;
+  text-align: center;
+  color: #40bddd;
+}
+
+.contact-description {
+  font-size: 30px;
+  padding-top: 60px;
+
+  @include spTab {
+    font-size: 20px;
+  }
+}
+
+.contact-contact {
+  margin-top: 60px;
+  padding-bottom: 100px;
+  a {
+    border-radius: 40px;
+    background-color: white;
+    color: #40bddd;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 160px;
+    box-shadow: 3px 3px 3px #00000029;
+
+    @include spTab {
+      font-size: 18px;
+      padding: 16px 78px;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 3px #00000029;
+      background-color: #40bddd;
+      color: white;
+    }
+  }
+}

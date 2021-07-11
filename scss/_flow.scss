@@ -1,0 +1,101 @@
+.flow-content {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.flow-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include spTab {
+    display: block;
+  }
+}
+
+.flow-item {
+  flex-basis: calc(33.333% - 16px);
+  display: flex;
+  margin-top: 0px;
+  position: relative;
+
+  @include spTab {
+    display: block;
+  }
+
+  &:nth-child(n + 4) {
+    margin-top: 100px;
+
+    @include spTab {
+      margin-top: 0px;
+    }
+  }
+}
+
+.flow-name {
+  text-align: center;
+  color: #40bddd;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.flow-img {
+  img {
+    width: 100%;
+    height: 110px;
+    object-fit: contain;
+
+    @include spTab {
+      height: 200px;
+    }
+  }
+}
+
+.flow-text {
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  @include spTab {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.flow-contact {
+  text-align: center;
+  a {
+    border-radius: 40px;
+    background-color: #40bddd;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px 20px;
+    box-shadow: 2px 2px 3px #00000029;
+
+    &:hover {
+      background-color: #f1ca00;
+      color: white;
+    }
+
+    @include spTab {
+      font-size: 16px;
+      padding: 7px 30px;
+    }
+  }
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 30px solid #f1ca00;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  margin: auto 0 auto 20px;
+
+  @include spTab {
+    border-left: 30px solid transparent;
+    border-top: 30px solid #f1ca00;
+    border-right: 30px solid transparent;
+    margin: 60px auto 30px;
+  }
+}
