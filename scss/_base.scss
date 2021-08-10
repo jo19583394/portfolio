@@ -1,0 +1,46 @@
+body {
+  background-color: white;
+  font-family: ヒラギノ丸ゴ ProN, W4;
+
+  line-height: 1.5;
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  section {
+    margin-top: 150px;
+  }
+  .cmn-title {
+    color: #40bddd;
+    width: 200px;
+    border-bottom: 3px solid #f1ca00;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    .main-title {
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+
+    .sub-title {
+      font-size: 20px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@mixin spTab {
+  @media print, screen and (max-width: 768px) {
+    @content;
+  }
+}

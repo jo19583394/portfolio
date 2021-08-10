@@ -1,0 +1,50 @@
+.top {
+  margin-top: 60px;
+
+  @include spTab {
+    margin-top: 40px;
+  }
+}
+
+.top-main {
+  width: 100%;
+  height: 700px;
+  background-image: url("../image/top_mv.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @include spTab {
+    height: 450px;
+
+    background-position: top center;
+  }
+}
+
+.catchcopy {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom: 50px;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  display: table;
+  z-index: 1;
+
+  @include spTab {
+    height: 100px;
+  }
+}
+
+.catchcopy-text {
+  color: #40bddd;
+  font-size: 30px;
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: middle;
+  z-index: 2;
+
+  @include spTab {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,102 @@
+.service-content {
+  display: flex;
+  margin: auto;
+  padding: 20px;
+  background: linear-gradient(-90deg, #fff6c7, #cef5ff);
+
+  @include spTab {
+    display: block;
+    padding: 20px, 0;
+  }
+}
+
+.service-mv {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+
+  @include spTab {
+    width: 70%;
+  }
+
+  img {
+    width: 400px;
+    height: auto;
+
+    @include spTab {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.service-explanation {
+  width: 50%;
+  margin-left: 40px;
+
+  @include spTab {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+.service-list {
+  width: 100%;
+  margin: auto;
+}
+
+.service-item {
+  text-align: left;
+  display: flex;
+  margin-top: 30px;
+
+  @include spTab {
+    margin-top: 50px;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
+
+.service-image {
+  img {
+    height: 130px;
+    width: 130px;
+
+    @include spTab {
+      height: 170px;
+      width: 170px;
+    }
+  }
+}
+
+.service-description {
+  margin-left: 40px;
+  margin-top: 20px;
+
+  @include spTab {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+
+.service-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.price {
+  margin-top: 20px;
+  display: inline-block;
+  text-align: left;
+}
+
+.price-text {
+  text-align: left;
+  display: inline-block;
+}
+
+.price-description {
+  margin-top: 40px;
+}
