@@ -1,102 +1,121 @@
-.nav-bar {
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: 0px 5px 6px #00000029;
-  background-color: white;
-  position: fixed;
-  z-index: 2;
-
-  @include spTab {
-    height: 40px;
-  }
-
-  .global-menu {
-    margin-right: 60px;
-
-    @include spTab {
-      margin-right: 0;
-    }
+.header {
+  .header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
   }
 
   .nav-btn {
+    display: none;
     width: 25px;
     height: 20px;
     margin-left: auto;
     margin-right: 30px;
-    margin-top: 10px;
+    margin-top: 20px;
     appearance: none;
     background: transparent;
     border: none;
+    font: inherit;
+    outline: none;
     position: relative;
     cursor: pointer;
-    display: none;
     @include spTab {
       display: block;
     }
-    span {
-      @include spTab {
-        display: block;
-        height: 3px;
-        width: 25px;
-        border-radius: 3px;
-        background-color: #40bddd;
-        position: absolute;
-
+    &.-active {
+      span {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: transform 0.3s ease;
         &:first-child {
-          top: 0px;
+          transform: rotate(45deg);
         }
         &:nth-child(2) {
-          top: 0;
-          bottom: 0;
-          margin: auto;
+          transform: rotate(45deg);
         }
         &:last-child {
-          bottom: 0px;
+          transform: rotate(-45deg);
         }
       }
+    }
+    span {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: #40bddd;
+      display: block;
+      transition: transform 0.3s ease;
+      &:first-child {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      &:last-child {
+        bottom: 0;
+      }
+    }
+  }
+
+  .nav {
+    width: 100%;
+    background-color: transparent;
+    padding-top: 0;
+    z-index: 3;
+    left: inherit;
+    right: 0;
+    box-shadow: 0px 5px 6px #00000029;
+    @include spTab {
+      position: fixed;
+      background-color: #000000cc;
+      padding-top: 145px;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    &.-active {
+      opacity: 1;
+      transition: opacity 0.3s ease;
     }
   }
 
   .nav-list {
     display: flex;
+    padding-bottom: 0;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
+
     height: 60px;
+    padding-right: 60px;
 
     @include spTab {
-      display: none;
-      position: absolute;
-      top: 0px;
-      width: 50%;
-      height: 1000px;
-      background-color: #40bddd;
-      text-align: left;
+      display: block;
+      text-align: center;
+      padding-bottom: 145px;
+      height: auto;
     }
-  }
+    .item {
+      + .item {
+        margin-top: 0;
+        margin-left: 20px;
 
-  .nav-item {
-    @include spTab {
-      border-bottom: 1px solid white;
-      padding-top: 15px;
-      padding-bottom: 15px;
-    }
-    &:nth-child(n + 2) {
-      margin-left: 40px;
-
-      @include spTab {
-        margin-left: 0px;
+        @include spTab {
+          margin-top: 20px;
+          margin-left: 0;
+        }
       }
     }
-
     a {
       color: #40bddd;
-      font-size: 20px;
+      font-size: 24px;
 
-      @include spTab {
-        color: white;
-        margin-left: 20px;
+      &:hover {
+        color: #f1ca00;
       }
     }
   }
