@@ -1,12 +1,18 @@
 // SP版グローバルメニューの表示・非表示
-if (window.matchMedia('(max-width: 768px)').matches) {
-$('.nav-btn').on('click', function() {
-  $('.nav-list').toggleClass('active');
-  $('.nav-list').animate(
-    {width: 'toggle'}, {'duration': 100}
-    );
+$(function(){
+  $('#nav-btn').on('click',function(){
+      $(this).toggleClass('-active');
+      $('#nav').toggleClass('-active');
+  });
 });
-}
+
+// SP版メニュークリックで背景非表示
+$(function(){
+  $('.item a').on('click', function(){
+    $('#nav-btn').toggleClass('-active');
+    $('#nav').toggleClass('-active');
+  });
+});
 
 // スクロール時のイベント
 AOS.init({
