@@ -1,7 +1,26 @@
+.works-list {
+  display: flex;
+  justify-content: space-around;
+
+  @include spTab {
+    display: block;
+  }
+}
+
+.works-item {
+  width: 400px;
+  height: 450px;
+  @include spTab {
+    margin-bottom: 30px;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .works-content {
   text-align: center;
-  width: 445px;
-  height: 100%;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 5px 5px 6px #00000029;
@@ -12,3 +31,4 @@
     color: black;
   }
 }
+
